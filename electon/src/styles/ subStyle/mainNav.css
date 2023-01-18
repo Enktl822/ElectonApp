@@ -1,0 +1,43 @@
+* {
+}
+
+.mainNav {
+  display: flex;
+  padding: 126px 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainNav ul {
+  width: 750px;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.mNav {
+  width: 140px;
+  height: 45px;
+  border-radius: 20px;
+  border: 1px solid #003585;
+  background-color: white;
+  cursor: pointer;
+  color: #003585;
+  font-size: 16px;
+}
+
+.mainNav h1 {
+  color: #003585;
+}
+
+.mNavCam {
+  width: 140px;
+  height: 45px;
+  border-radius: 20px;
+  border: 0px;
+  background-color: #a7f65c;
+  cursor: pointer;
+  color: white;
+  font-weight: 800;
+  font-size: 16px;
+}
