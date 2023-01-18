@@ -1,13 +1,12 @@
-import Elogo from "../Icons/Elogo";
 import "../styles/header.css";
+import Banner from "./subComp/Banner";
+import NavbarBlue from "./subComp/Navbar";
 
 export default function Header() {
   return (
     <div className="head">
-      <navbar>
-        <Elogo />
-      </navbar>
-      <div className="banner"></div>
+      <NavbarBlue />
+      <Banner />
     </div>
   );
 }
