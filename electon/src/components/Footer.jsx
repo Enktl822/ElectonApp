@@ -5,6 +5,7 @@ export default function Footer() {
   return (
     <div className="footer">
       <Elogo />
+      
     </div>
   );
 }

@@ -59,9 +59,16 @@ export default function MainNav() {
           ))}
         </ul>
       </div>
+
+      <div className="cards">
       {datta.map((e) => (
         <Card datta={e} />
       ))}
+      </div>
+
+      
+
+
     </div>
   );
 }
