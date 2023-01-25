@@ -3,11 +3,12 @@ import Footer from "../components/Footer";
 import Main from "../components/Main";
 import "../styles/home.css";
 
-export default function Home() {
+export default function Home(prop) {
+  const { data } = prop;
   return (
     <div className="home container">
       <Header />
-      <Main />
+      <Main data={data} />
       <Footer />
     </div>
   );

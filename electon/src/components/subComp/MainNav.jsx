@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../../styles/ subStyle/mainNav.css";
 import Card from "./Card";
-import { data } from "../../util/data";
 
 const productLists = [
   "all",
@@ -11,18 +10,20 @@ const productLists = [
   "telescope",
 ];
 
-export default function MainNav() {
+export default function MainNav(prop) {
+  const { data } = prop;
   const [datta, setData] = useState(data);
   const [saver, setSaver] = useState(0);
 
   function asd(prop) {
-    const test = data.filter((e) => e.category === prop);
+    const test = datta.filter((e) => e.category === prop);
     if (prop === "all") {
-      setData(data);
+      setData();
     } else {
       setData(test);
     }
   }
+  console.log(data);
 
   return (
     <div>
@@ -61,14 +62,10 @@ export default function MainNav() {
       </div>
 
       <div className="cards">
-      {datta.map((e) => (
-        <Card datta={e} />
-      ))}
+        {datta.map((e, index) => (
+          <Card key={index} datta={e} />
+        ))}
       </div>
-
-      
-
-
     </div>
   );
 }
