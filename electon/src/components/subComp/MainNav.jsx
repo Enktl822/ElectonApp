@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../../styles/ subStyle/mainNav.css";
 import Card from "./Card";
 
-const productLists = [
+const filterBtns = [
   "all",
   "appliances",
   "computers & tablets",
@@ -13,7 +13,8 @@ const productLists = [
 export default function MainNav(prop) {
   const { data } = prop;
   const [datta, setData] = useState(data);
-  const [saver, setSaver] = useState(0);
+  // const [filter, setFilter] = useState(0);
+  const [selected, setSelected] = useState("all");
 
   function asd(prop) {
     const test = datta.filter((e) => e.category === prop);
@@ -25,37 +26,30 @@ export default function MainNav(prop) {
   }
   console.log(data);
 
+  function filterHandler(buttonName) {
+    setSelected(buttonName);
+    if (buttonName === "all") {
+      setData(data);
+    } else {
+      setData(data.filter((prod) => prod.category === buttonName));
+    }
+  }
   return (
     <div>
       <div className="mainNav">
         <h1>Popular products</h1>
         <ul>
-          {productLists.map((list, index) => (
-            <li
-              key={index}
-              onClick={() => {
-                setSaver(index);
-              }}
-            >
-              {saver == index ? (
-                <button
-                  onClick={() => {
-                    asd(list);
-                  }}
-                  className="mNavCam"
-                >
-                  {list}
-                </button>
-              ) : (
-                <button
-                  onClick={() => {
-                    asd(list);
-                  }}
-                  className="mNav"
-                >
-                  {list}
-                </button>
-              )}
+          {filterBtns.map((buttonName, index) => (
+            <li key={index} onClick={() => filterHandler(buttonName)}>
+              <button
+                className={
+                  buttonName === selected
+                    ? "filterButton active"
+                    : "filterButton"
+                }
+              >
+                {buttonName}
+              </button>
             </li>
           ))}
         </ul>

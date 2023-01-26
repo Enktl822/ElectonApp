@@ -47,3 +47,7 @@
   grid-template-columns: repeat(4, 4fr);
   gap: 20px;
 }
+
+.active {
+  background-color: #a7f65c;
+}
