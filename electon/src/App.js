@@ -4,7 +4,7 @@ import axios from "axios";
 
 function App() {
 
-  const [data, setData] = useState();
+  const [data, setData] = useStatenpm();
 
   useEffect(() => {
     axios.get("http://localhost:2022/products")
