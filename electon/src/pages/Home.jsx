@@ -11,8 +11,8 @@ export default function Home(prop) {
     <div className="home container">
       <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/product/:id" element={<Product />} />
+        <Route path="/" element={<Main data={data} />} />
+        <Route path="/product/:id" element={<Product data={data} />} />
       </Routes>
       <Footer />
     </div>

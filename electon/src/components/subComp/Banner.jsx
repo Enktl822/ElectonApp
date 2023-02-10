@@ -2,26 +2,28 @@ import "../../styles/ subStyle/banner.css";
 
 export default function Banner() {
   return (
-    <div className="banner">
-      <div className="bannerContent">
-        <div className="bannerTitle">
-          <h1>CANON</h1>
-          <p>Camera</p>
+    <div className="banner-container">
+      <div className="banner">
+        <div className="bannerContent">
+          <div className="bannerTitle">
+            <h1>CANON</h1>
+            <p>Camera</p>
+          </div>
+
+          <form>
+            <button className="shopNow">Shop now</button>
+            <button className="viewMore">View more</button>
+          </form>
         </div>
 
-        <form>
-          <button className="shopNow">Shop now</button>
-          <button className="viewMore">View more</button>
-        </form>
-      </div>
+        <div className="bannerPic">
+          <div className="bannerPrice">
+            <p>only</p>
+            <p>$89</p>
+          </div>
 
-      <div className="bannerPic">
-        <div className="bannerPrice">
-          <p>only</p>
-          <p>$89</p>
+          <img src="../pics/headCam.png" alt="Cam" />
         </div>
-
-        <img src="../pics/headCam.png" alt="Cam" />
       </div>
     </div>
   );

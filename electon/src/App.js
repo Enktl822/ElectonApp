@@ -6,9 +6,9 @@ function App() {
   const [data, setData] = useState();
 
   useEffect(() => {
-    axios
-      .get("http://localhost:2022/products")
-      .then((products) => setData(products.data));
+    axios.get("http://localhost:2022/products").then((products) => {
+      setData(products.data);
+    });
   }, []);
 
   return <div className="App">{data && <Home data={data} />}</div>;

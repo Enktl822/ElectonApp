@@ -6,7 +6,6 @@ export default function Header() {
   return (
     <div className="head">
       <NavbarBlue />
-      <Banner />
     </div>
   );
 }
