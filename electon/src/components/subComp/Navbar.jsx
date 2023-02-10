@@ -1,4 +1,3 @@
-import Basket from "../../Icons/Basket";
 import SignIn from "../../Icons/SignIn";
 import "../../styles/ subStyle/navbar.css";
 import Elogo from "../../Icons/Elogo";

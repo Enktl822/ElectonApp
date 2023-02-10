@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useContext, useState } from "react";
+
+import { dataContext } from "../../App";
 import "../../styles/ subStyle/mainNav.css";
 import Card from "./Card";
 
@@ -10,10 +12,12 @@ const filterBtns = [
   "telescope",
 ];
 
-export default function MainNav(prop) {
-  const { data } = prop;
+export default function MainNav() {
+  const { data } = useContext(dataContext);
   const [datta, setData] = useState(data);
-  // const [filter, setFilter] = useState(0);
+  useEffect(() => {
+    setData(data);
+  }, [data]);
   const [selected, setSelected] = useState("all");
 
   function asd(prop) {
@@ -56,9 +60,9 @@ export default function MainNav(prop) {
       </div>
 
       <div className="cards">
-        {datta.map((e, index) => (
-          <Card key={index} datta={e} />
-        ))}
+        {datta.map((e, index) => {
+          return <Card key={index} datta={e} />;
+        })}
       </div>
     </div>
   );

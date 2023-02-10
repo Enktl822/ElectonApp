@@ -5,14 +5,13 @@ import { Route, Routes } from "react-router-dom";
 import "../styles/home.css";
 import Product from "./Product";
 
-export default function Home(prop) {
-  const { data } = prop;
+export default function Home() {
   return (
     <div className="home container">
       <Header />
       <Routes>
-        <Route path="/" element={<Main data={data} />} />
-        <Route path="/product/:id" element={<Product data={data} />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/product/:id" element={<Product />} />
       </Routes>
       <Footer />
     </div>
