@@ -4,10 +4,11 @@ import axios from "axios";
 
 
 export const dataContext = createContext();
+export const basketContext = createContext();
 
 function App() {
-
   const [data, setData] = useState([]);
+  const [basket, setBasket] = useState([]);
 
   useEffect(() => {
     axios.get("http://localhost:2022/products").then((products) => {
@@ -17,9 +18,11 @@ function App() {
   }, []);
 
   return <div className="App">
-    <dataContext.Provider value={{ data }}>
-      <Home />
-    </dataContext.Provider >
+    <basketContext.Provider value={{ basket, setBasket }}>
+      <dataContext.Provider value={{ data }}>
+        <Home />
+      </dataContext.Provider >
+    </basketContext.Provider>
   </div>;
 
 }
