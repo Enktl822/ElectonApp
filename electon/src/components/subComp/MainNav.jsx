@@ -1,5 +1,4 @@
 import { useEffect, useContext, useState } from "react";
-
 import { dataContext } from "../../App";
 import "../../styles/ subStyle/mainNav.css";
 import Card from "./Card";
@@ -30,7 +29,7 @@ export default function MainNav() {
   }
   console.log(data);
 
-  function filterHandler(buttonName) {
+  function filterHandler(buttonName) {  
     setSelected(buttonName);
     if (buttonName === "all") {
       setData(data);
