@@ -7,8 +7,9 @@ import { basketContext } from "../../App";
 export default function Card(props) {
   const { datta } = props;
   const { basket, setBasket } = useContext(basketContext);
-  // console.log(basket.length);
+
   const navigate = useNavigate();
+
   return (
     <div className="card" style={{ cursor: "pointer" }}>
       <div
@@ -21,7 +22,6 @@ export default function Card(props) {
       </div>
       <div className="cardContent">
         <div className="cardBasket">
-          {/* <h2>{datta.spec}</h2> */}
           <h3>{datta.name.slice(0, 15)}</h3>
           <p>${datta.price}</p>
         </div>

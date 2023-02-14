@@ -1,4 +1,4 @@
-export default function SignIn() {
+export default function SignInIcon() {
   return (
     <div>
       <svg

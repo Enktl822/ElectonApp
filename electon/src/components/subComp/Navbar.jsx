@@ -1,7 +1,7 @@
-import SignIn from "../../Icons/SignIn";
 import "../../styles/ subStyle/navbar.css";
 import Elogo from "../../Icons/Elogo";
 import BasksetCanvas from "./BasketCanvas";
+import Login from "../../pages/Login";
 
 export default function NavbarBlue() {
   return (
@@ -17,11 +17,7 @@ export default function NavbarBlue() {
       </form>
 
       <div className="navGroup headNav">
-        <div className="navGroup">
-          <SignIn />
-          <p>Sign in</p>
-        </div>
-
+        <Login />
         <BasksetCanvas />
       </div>
     </div>

@@ -19,17 +19,7 @@ export default function MainNav() {
   }, [data]);
   const [selected, setSelected] = useState("all");
 
-  function asd(prop) {
-    const test = datta.filter((e) => e.category === prop);
-    if (prop === "all") {
-      setData();
-    } else {
-      setData(test);
-    }
-  }
-  console.log(data);
-
-  function filterHandler(buttonName) {  
+  function filterHandler(buttonName) {
     setSelected(buttonName);
     if (buttonName === "all") {
       setData(data);
