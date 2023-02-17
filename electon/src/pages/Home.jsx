@@ -4,6 +4,7 @@ import Main from "../components/Main";
 import { Route, Routes } from "react-router-dom";
 import "../styles/home.css";
 import Product from "./Product";
+import Register from "./Register";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/product/:id" element={<Product />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <Footer />
     </div>
